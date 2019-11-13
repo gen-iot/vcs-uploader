@@ -40,7 +40,7 @@ def __main():
 
 def main():
     try:
-        main()
+        __main()
     except Exception as e:
         if __debug:
             raise e
