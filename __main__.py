@@ -1,5 +1,8 @@
-import requests
+#!/usr/bin/env python3
+
 import argparse
+
+import requests
 
 __debug = False
 
