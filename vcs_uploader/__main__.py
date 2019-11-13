@@ -15,7 +15,9 @@ def parse_args() -> argparse.Namespace:
     parser.add_argument('-l', '--latest', type=int, choices=[0, 1], default=1, help='set to latest?')
     parser.add_argument('-m', '--message', type=argparse.FileType('rt'), help='version descriptions', required=True)
     parser.add_argument('-v', '--version', type=str, help='version code', required=True)
-    parser.add_argument('-d', '--debug', type=int, choices=[0, 1], default=0, help='debug vcs-uploader')
+    parser.add_argument('-d', '--debug', nargs='?',
+                        type=int, choices=[0, 1], default=0, const=1,
+                        help='debug vcs-uploader')
     return parser.parse_args()
 
 
