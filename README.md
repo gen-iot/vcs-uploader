@@ -4,7 +4,7 @@
 ## Getting Started
 
 ```bash
-usage: __main__.py [-h] -f FILE -r REPO [-l {0,1}] -m MESSAGE -v VERSION
+usage: vcsup [-h] -f FILE -r REPO [-l {0,1}] -m MESSAGE -v VERSION
                    [-d {0,1}]
                    url
 
