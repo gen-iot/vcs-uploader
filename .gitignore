@@ -1,2 +1,6 @@
 venv/
 .idea/
+build/lib/
+dist/
+vcs_uploader.egg-info/
+__pycache__/

@@ -16,6 +16,7 @@ def parse_args() -> argparse.Namespace:
     parser.add_argument('-m', '--message', type=argparse.FileType('rt'), help='version descriptions', required=True)
     parser.add_argument('-v', '--version', type=str, help='version code', required=True)
     parser.add_argument('-d', '--debug', type=int, choices=[0, 1], default=0, help='debug vcs-uploader')
+    parser.print_help()
     return parser.parse_args()
 
 
