@@ -25,7 +25,7 @@ setup(
     ],
     entry_points={
         'console_scripts': [
-            'vcs-uploader = core.__main__:main '
+            'vcsup = vcs_uploader.core.__main__:main '
         ]
     }
 
