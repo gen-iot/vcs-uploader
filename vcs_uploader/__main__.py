@@ -10,7 +10,7 @@ __debug = False
 def parse_args() -> argparse.Namespace:
     parser = argparse.ArgumentParser(description='gen vcs-uploader')
     parser.add_argument('url', type=str, help='server api base url')
-    parser.add_argument('-f', '--file', type=argparse.FileType('rt'), help='version\'s file', required=True)
+    parser.add_argument('-f', '--file', type=argparse.FileType('rb'), help='version\'s file', required=True)
     parser.add_argument('-r', '--repo', type=str, help='repo name', required=True)
     parser.add_argument('-l', '--latest', type=int, choices=[0, 1], default=1, help='set to latest?')
     parser.add_argument('-m', '--message', type=argparse.FileType('rt'), help='version descriptions', required=True)
