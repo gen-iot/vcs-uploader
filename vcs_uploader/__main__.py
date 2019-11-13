@@ -16,11 +16,10 @@ def parse_args() -> argparse.Namespace:
     parser.add_argument('-m', '--message', type=argparse.FileType('rt'), help='version descriptions', required=True)
     parser.add_argument('-v', '--version', type=str, help='version code', required=True)
     parser.add_argument('-d', '--debug', type=int, choices=[0, 1], default=0, help='debug vcs-uploader')
-    parser.print_help()
     return parser.parse_args()
 
 
-def main():
+def __main():
     global __debug
     args = parse_args()
     __debug = True if args.debug == 1 else False
@@ -39,7 +38,7 @@ def main():
     print('Success')
 
 
-if __name__ == '__main__':
+def main():
     try:
         main()
     except Exception as e:
@@ -47,3 +46,7 @@ if __name__ == '__main__':
             raise e
         else:
             print("got error %s" % e)
+
+
+if __name__ == '__main__':
+    main()
